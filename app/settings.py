@@ -13,12 +13,11 @@ LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'),)
 # load envFile
 env = environ.Env(DEBUG=(bool,False))
 
-# check weather testing or production 
+# check weather testing or production
 IS_ON_HEROKU = env.bool('ON_HEROKU', default=False)
 
 if not IS_ON_HEROKU:
     env.read_env(os.path.join(BASE_DIR,'.env'))
-
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
