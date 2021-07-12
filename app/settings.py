@@ -25,12 +25,12 @@ if not IS_ON_HEROKU:
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.get_value('DEBUG', cast = bool, default = True)
+DEBUG = env.get_value('DEBUG', cast = bool)
 
 if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
-    ALLOWED_HOSTS = ['tktodoappdjango.herokuapp.com', 'www.xxx.com']
+    ALLOWED_HOSTS = ['tk-todoapp.herokuapp.com']
 
 
 INSTALLED_APPS = [
