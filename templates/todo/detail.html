@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block main %}
+
+<section>
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-11 col-g-8 mx-auto mb-3">
+                <div class="card border rounded-pill py-3 text-dark-light px-4">
+                    <h5 class="mb-0">Title: {{ todo.title }}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-11 col-g-8 mx-auto mb-3">
+                <div class="card border rounded-pill py-3 text-dark-light px-4">
+                    <p class="mb-0">Detail: {{ todo.body|linebreaksbr }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-11 col-g-8 mx-auto mb-3">
+                <div class="card border rounded-pill py-3 text-dark-light px-4">
+                    <p class="mb-0">Created: {{ todo.created|date:'Y/m/d H:i ' }} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="text-right">
+                        <a href="{% url 'todo:index' %}" class="btn bg-lightgrey shadow text-dark-light border-orange">Back</a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="text-left">
+                        <a href="{% url 'todo:todo_update' todo.pk %}" class="btn bg-white shadow text-pink border-orange">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+{% endblock %}
