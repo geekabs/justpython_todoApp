@@ -1,6 +1,6 @@
-# Todolist 
+# Todoアプリ
 
-## just pythonで学習したTodoアプリです。
+## 「just python」で学習したTodoアプリです。
 
-## URL(要ログイン)
+## 学習サイト(要ログイン)
 ## https://just-python.com/learning/mypytodo
