@@ -29,7 +29,7 @@ DEBUG = env.get_value('DEBUG', cast = bool)
 if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
-    ALLOWED_HOSTS = ['tk-todoapp.herokuapp.com']
+    ALLOWED_HOSTS = ['*']
 
 
 INSTALLED_APPS = [
